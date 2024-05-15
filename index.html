@@ -1,150 +1,145 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Node-Link Chart</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    .content {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<title>Minding With You</title>
+<style>
+  body {
+    resize: none;
+    min-width: 1500px;
+    min-height: 800px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow: hidden;
+  }
+  .banner {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.5px 4px rgba(0, 0, 0, 0.1);
+  }
+  .banner h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+  }
+  .banner .navigation {
+    display: flex;
+  }
+  .banner .navigation a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  .banner .navigation a:first-child {
+    margin-left: 0;
+  }
+  .banner .navigation a:hover {
+    background-color: #ddd;
+  }
+  .container {
+      display: flex;
+      height: calc(100% - 100px);
+      overflow: auto; /* Add this line */
+  }
+  .svg-container {
       flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .banner {
-      background-color: #f9f9f9;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .banner h1 {
-      margin: 0;
-      color: #333;
-      font-size: 24px;
-    }
-    .banner .navigation {
-      display: flex;
-    }
-    .banner .navigation a {
-      text-decoration: none;
-      color: #333;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      margin-left: 10px;
-      font-weight: bold;
-    }
-    .banner .navigation a:first-child {
-      margin-left: 0;
-    }
-    .banner .navigation a:hover {
-      background-color: #ddd;
-    }
-    #visualization {
-      width: 100%;
-      height: 70vh; /* adjust height as needed */
-      display: block;
-      margin: 0 auto;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    #footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    #footer h2 {
-      margin: 0;
-      font-size: 24px;
-    }
-    #footer p {
-      margin: 10px 0 0;
-      font-size: 14px;
-    }
-    .link {
-      fill: none;
-      stroke: #ccc;
-      stroke-width: 2px;
-    }
-    .node {
-      stroke: #fff;
-      stroke-width: 2px;
-    }
-    .node-label {
-        font-size: 3em;
-        text-anchor: middle;
-        dominant-baseline: middle;
-        fill: white;
-      }
-  </style>
+      background-color: #f0f0f0; /* Adjust as needed */
+  }
+  .text-container {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    place-items: center; 
+    margin-left: 2%; 
+    margin-bottom: 4%;
+  }
+  .text-content {
+    margin: auto auto;
+    width: 100%; /* Text box takes up full width of container */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 1.2vw; /* Set font size */
+    resize: vertical; /* Allow vertical resizing */
+  }
+  p {
+      font-size: 0.7em;
+  }
+  #visualization {
+    width: 100%;
+    height: 100vh; /* adjust height as needed */
+    display: block;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 2px;
+  }
+  .node {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .node-label {
+    font-size: 2em;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: white;
+  }
+</style>
 </head>
-
 <body>
-    <div class="banner">
-        <h1>Minding With You</h1>
-        <div class="navigation">
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+  <div class="banner">
+    <h1>Minding With You</h1>
+    <div class="navigation">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="container" >
+      <div class="svg-container" id = "svg container">
+          <!-- SVG content goes here -->
+            <svg id = "visualization"></svg>
+      </div>
+      <div class="text-container">
+        <div class="text-content">
+          <h1> Minding With You </h1>
+          <h2> Annotations for <i>Mind in Life</i> by Evan Thompson</h2>
+          <p>By the CGSC 253 class at Carleton College, Spring 2024</p>
+          <p>With Prof. Jay McKinney</p>
         </div>
-    </div>
-
-    <div viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
-        <svg id = "visualization"></svg>
-    </div>
-
-    <div style="text-align: center;">
-    <h2>Annotations for <i>Mind in Life</i> by Evan Thompson</h2>
-    <h2>Select A Chapter To Begin</h2>
-    </div>
-    <script>
-    
-    numNodes = 14
+      </div>
+  </div>
+  <script>
+    const numNodes = 14
     // Generate random data for nodes and links
-    const nodes = d3.range(numNodes).map(d => ({ id: d }));
-    const links = d3.range(numNodes).map((d, i) => ({ source: i, target: 0 }));
-
-    // Calculate positions for surrounding nodes in a circular pattern
+    var nodes = d3.range(numNodes).map(d => ({ id: d, isToggled : 0}));
+    var links = d3.range(numNodes).map((d, i) => ({ source: i, target: 0 }));
     const radius = 300;
-    var centerX = window.innerWidth / 2;
-    var centerY = window.innerHeight / 2 -200;
-
-    nodes[0].fx = centerX;
-    nodes[0].fy = centerY;
-
-    const angleStep = (2 * Math.PI) / (numNodes - 1); // excluding the center node
-    for (let i = 1; i < numNodes; i++) {
-        const angle = (i - 1) * angleStep - Math.PI/2;
-        nodes[i].fx = centerX + radius * Math.cos(angle);
-        nodes[i].fy = centerY + radius * Math.sin(angle);
-    }
-
-    // Set up the D3 force simulation
-    var simulation = d3.forceSimulation(nodes)
-        .force("link", d3.forceLink(links).id(d => d.id).distance(radius))
-        .force("charge", d3.forceManyBody().strength(-100)) // Increase repulsion between nodes
-        .force("center", d3.forceCenter(centerX, centerY));
-
+    var centerX, centerY;
+    var simulation;
+    const isChapterActive = [0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1]
+    const nodeColors = ["lightgray","#EDB4E9", "#EDB4E9", "#EDB4E9", "#EDB4E9", "#00C6AA", "#00C6AA", "#00C6AA", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF"]
+    
     // Create SVG elements
-    const svg = d3.select("svg");
-
-    const link = svg.selectAll(".link")
+    var svg = d3.select("svg");
+    var link = svg.selectAll(".link")
         .data(links)
         .enter().append("line")
         .attr("class", "link");
-
-    isChapterActive = [0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1]
-    nodeColors = ["lightgray","#EDB4E9", "#EDB4E9", "#EDB4E9", "#EDB4E9", "#00C6AA", "#00C6AA", "#00C6AA", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF"]
-    const node = svg.selectAll(".node")
+    var node = svg.selectAll(".node")
         .data(nodes)
         .enter().append("circle")
         .attr("class", "node")
@@ -155,12 +150,12 @@
         })
         .on("mouseover", handleMouseOver)
         .on("mouseout", handleMouseOut)// Increase node size
+        .on("click", toggleConnections)
         .each(function(d) {
-          // Store the original color of each node
           d.originalColor = d.color;
       });
-    // Add node labels
-    const nodeLabels = svg.selectAll(".node-label")
+
+    var nodeLabels = svg.selectAll(".node-label")
       .data(nodes)
       .enter().append("text")
       .attr("class", "node-label")
@@ -171,58 +166,85 @@
       .attr("dx", "-.05em") // Adjust vertical alignment
       .text(function(d){if(d.id != 0) return d.id;})
       .on("mouseover", function(d, i) {
-          var circle = node.filter(function(data, index) {
-            return index === i.index;
-          });
-          circle.node().dispatchEvent(new Event("mouseover"));
+          if(isChapterActive[i.index] === 0) return
+          d3.select(this).style("cursor", "pointer");
+          findNode(i).node().dispatchEvent(new Event("mouseover"));
       })
-      .on("mouseout", function(d, i) {
-        var circle = node.filter(function(data, index) {
-          return index === i.index;
-        });
-        circle.node().dispatchEvent(new Event("mouseout"));
-    });  
+      .on("click", function(d, i) {
+        findNode(i).node().dispatchEvent(new Event("click"));
+      });
+    updateNodes()
+
+    window.addEventListener('load', createSimulation);
+    window.addEventListener('resize', createSimulation);
+    
     // Function to update simulation center on window resize
     function createSimulation() {
-      centerX = window.innerWidth / 2;
-      centerY = window.innerHeight / 2 -200;
-        simulation = d3.forceSimulation(nodes)
-            .force("link", d3.forceLink(links).id(d => d.id).distance(300))
-            .force("charge", d3.forceManyBody().strength(-100)) // Increase repulsion between nodes
-            .force("center", d3.forceCenter(centerX, centerY))
-            .on("tick", () => {
-                link
-                .attr("x1", d => d.source.x)
-                .attr("y1", d => d.source.y)
-                .attr("x2", d => d.target.x)
-                .attr("y2", d => d.target.y);
-                node
-                .attr("cx", d => d.x)
-                .attr("cy", d => d.y);
-                nodeLabels
-                .attr("x", d => d.x)
-                .attr("y", d => d.y);
-            });
+      var container = document.getElementById('svg container').getBoundingClientRect();
+      centerX = container.left + container.width/2;
+      centerY = container.top + container.height/2 - 150;
+      updateNodes()
+      simulation = d3.forceSimulation(nodes)
+          .force("link", d3.forceLink(links).id(d => d.id).distance(300))
+          .force("charge", d3.forceManyBody().strength(-100)) // Increase repulsion between nodes
+          .force("center", d3.forceCenter(centerX, centerY))
+          .on("tick", () => {
+              link
+              .attr("x1", d => d.source.x)
+              .attr("y1", d => d.source.y)
+              .attr("x2", d => d.target.x)
+              .attr("y2", d => d.target.y);
+              node
+              .attr("cx", d => d.x)
+              .attr("cy", d => d.y);
+              nodeLabels
+              .attr("x", d => d.x)
+              .attr("y", d => d.y);
+          });
+    }
+
+    function updateNodes(){
+      nodes[0].fx = centerX;
+      nodes[0].fy = centerY;
+      const angleStep = (2 * Math.PI) / (numNodes - 1); // excluding the center node
+      for (let i = 1; i < numNodes; i++) {
+          const angle = (i - 1) * angleStep - Math.PI/2;
+          nodes[i].fx = centerX + radius * Math.cos(angle);
+          nodes[i].fy = centerY + radius * Math.sin(angle);
+      }
+    }
+
+    function findNode(i){
+      var circle = node.filter(function(data, index) {
+        return index === i.index;
+      });
+      return circle
     }
 
     // Handle mouseover event
     function handleMouseOver(d, i) {
       if(isChapterActive[i.id] === 0) return
-      d3.select(this).style("fill", "orange");
+      d3.select(this).style("cursor", "pointer");
+      if(i.isToggled) return
+      d3.select(this).style("fill", "#ffd7b5");
     }
 
     // Handle mouseout event
     function handleMouseOut(d, i) {
-        d3.select(this).style("fill", d.originalColor);
+      d3.select(this).style("cursor", "default");
+      if(i.isToggled) return
+      d3.select(this).style("fill", d.originalColor);
     }
-    window.addEventListener('load', createSimulation);
-    window.addEventListener('resize', createSimulation);
+
+    function toggleConnections(d, i) {
+      if(isChapterActive[i.id] === 0) return
+      i.isToggled = 1 - i.isToggled
+      d3.select(this).style("fill", "orange");  
+    }
+  
+  
     </script>
-
-    <footer style="text-align: center;" font-size = 0.8em>
-        <p>By the CGSC 253 class at Carleton College, Spring 2024</p>
-        <p>With Prof. Jay McKinney</p>
-    </footer>
-
+  
+  
 </body>
 </html>
