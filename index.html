@@ -1,9 +1,218 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Node-Link Chart</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .banner {
+      background-color: #f9f9f9;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .banner h1 {
+      margin: 0;
+      color: #333;
+      font-size: 24px;
+    }
+    .banner .navigation {
+      display: flex;
+    }
+    .banner .navigation a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+    .banner .navigation a:first-child {
+      margin-left: 0;
+    }
+    .banner .navigation a:hover {
+      background-color: #ddd;
+    }
+    #visualization {
+      width: 100%;
+      height: 70vh; /* adjust height as needed */
+      display: block;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    #footer h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+    #footer p {
+      margin: 10px 0 0;
+      font-size: 14px;
+    }
+    .link {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 2px;
+    }
+    .node {
+      fill: steelblue;
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+    .node:hover {
+      fill: orange;
+  }
+    .node-label {
+        font-size: 3em;
+        text-anchor: middle;
+        dominant-baseline: middle;
+        fill: white;
+      }
+  </style>
+</head>
 
-  </body>
+<body>
+    <div class="banner">
+        <h1>Minding With You</h1>
+        <div class="navigation">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+        <svg id = "visualization"></svg>
+    </div>
+
+    <div style="text-align: center;">
+    <h2>Annotations for <i>Mind in Life</i> by Evan Thompson</h2>
+    <h2>Select A Chapter To Begin</h2>
+    </div>
+    <script>
+    
+    numNodes = 13
+    // Generate random data for nodes and links
+    const nodes = d3.range(numNodes).map(d => ({ id: d + 1 }));
+    const links = d3.range(numNodes).map((d, i) => ({ source: i + 1, target: 1 }));
+
+    // Calculate positions for surrounding nodes in a circular pattern
+    const radius = 300;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2 -200;
+
+    nodes[0].fx = centerX;
+    nodes[0].fy = centerY;
+
+    const angleStep = (2 * Math.PI) / (numNodes - 1); // excluding the center node
+    for (let i = 1; i < numNodes; i++) {
+        const angle = (i - 1) * angleStep - Math.PI/2;
+        nodes[i].fx = centerX + radius * Math.cos(angle);
+        nodes[i].fy = centerY + radius * Math.sin(angle);
+    }
+
+    // Set up the D3 force simulation
+    var simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(links).id(d => d.id).distance(radius))
+        .force("charge", d3.forceManyBody().strength(-100)) // Increase repulsion between nodes
+        .force("center", d3.forceCenter(centerX, centerY));
+
+    // Create SVG elements
+    const svg = d3.select("svg");
+
+    const link = svg.selectAll(".link")
+        .data(links)
+        .enter().append("line")
+        .attr("class", "link");
+
+    const node = svg.selectAll(".node")
+        .data(nodes)
+        .enter().append("circle")
+        .attr("class", "node")
+        .attr("r", 50)
+        .on("mouseover", handleMouseOver)
+        .on("mouseout", handleMouseOut);// Increase node size
+
+    // Add node labels
+    const nodeLabels = svg.selectAll(".node-label")
+      .data(nodes)
+      .enter().append("text")
+      .attr("class", "node-label")
+      .attr("text-anchor", "middle")
+      .attr("dominant-baseline", "middle")
+      .attr("fill", "white")
+      .attr("dy", ".12em") // Adjust vertical alignment
+      .attr("dx", "-.05em") // Adjust vertical alignment
+      .text(d => d.id);
+
+    nodeLabels.on("mouseover", function(d, i) {
+      console.log("over")
+      var circle = node.filter(function(data, index) {
+        return index === i;
+      });
+      console.log(circle)
+      if (circle.size() > 0) {
+        circle.node().dispatchEvent(new Event("mouseover"));
+      }
+  }); 
+    // Function to update simulation center on window resize
+    function createSimulation() {
+        simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(300))
+            .force("charge", d3.forceManyBody().strength(-100)) // Increase repulsion between nodes
+            .force("center", d3.forceCenter(centerX, centerY))
+            .on("tick", () => {
+                link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+                node
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y);
+                nodeLabels
+                .attr("x", d => d.x)
+                .attr("y", d => d.y);
+            });
+    }
+
+    // Handle mouseover event
+    function handleMouseOver(d, i) {
+        d3.select(this).attr("fill", "orange");
+    }
+
+    // Handle mouseout event
+    function handleMouseOut(d, i) {
+        d3.select(this).attr("fill", "steelblue");
+    }
+    window.addEventListener('load', createSimulation);
+    window.addEventListener('resize', createSimulation);
+    </script>
+
+    <footer style="text-align: center;" font-size = 0.8em>
+        <p>By the CGSC 253 class at Carleton College, Spring 2024</p>
+        <p>With Prof. Jay McKinney</p>
+    </footer>
+
+</body>
 </html>
