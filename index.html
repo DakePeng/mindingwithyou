@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -76,13 +77,9 @@
       stroke-width: 2px;
     }
     .node {
-      fill: steelblue;
       stroke: #fff;
       stroke-width: 2px;
     }
-    .node:hover {
-      fill: orange;
-  }
     .node-label {
         font-size: 3em;
         text-anchor: middle;
@@ -111,15 +108,15 @@
     </div>
     <script>
     
-    numNodes = 13
+    numNodes = 14
     // Generate random data for nodes and links
-    const nodes = d3.range(numNodes).map(d => ({ id: d + 1 }));
-    const links = d3.range(numNodes).map((d, i) => ({ source: i + 1, target: 1 }));
+    const nodes = d3.range(numNodes).map(d => ({ id: d }));
+    const links = d3.range(numNodes).map((d, i) => ({ source: i, target: 0 }));
 
     // Calculate positions for surrounding nodes in a circular pattern
     const radius = 300;
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2 -200;
+    var centerX = window.innerWidth / 2;
+    var centerY = window.innerHeight / 2 -200;
 
     nodes[0].fx = centerX;
     nodes[0].fy = centerY;
@@ -145,14 +142,23 @@
         .enter().append("line")
         .attr("class", "link");
 
+    isChapterActive = [0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1]
+    nodeColors = ["lightgray","#EDB4E9", "#EDB4E9", "#EDB4E9", "#EDB4E9", "#00C6AA", "#00C6AA", "#00C6AA", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF"]
     const node = svg.selectAll(".node")
         .data(nodes)
         .enter().append("circle")
         .attr("class", "node")
         .attr("r", 50)
+        .attr("fill", function(d){
+          if(isChapterActive[d.id] === 0) return nodeColors[0]
+          return nodeColors[d.id];
+        })
         .on("mouseover", handleMouseOver)
-        .on("mouseout", handleMouseOut);// Increase node size
-
+        .on("mouseout", handleMouseOut)// Increase node size
+        .each(function(d) {
+          // Store the original color of each node
+          d.originalColor = d.color;
+      });
     // Add node labels
     const nodeLabels = svg.selectAll(".node-label")
       .data(nodes)
@@ -163,20 +169,23 @@
       .attr("fill", "white")
       .attr("dy", ".12em") // Adjust vertical alignment
       .attr("dx", "-.05em") // Adjust vertical alignment
-      .text(d => d.id);
-
-    nodeLabels.on("mouseover", function(d, i) {
-      console.log("over")
-      var circle = node.filter(function(data, index) {
-        return index === i;
-      });
-      console.log(circle)
-      if (circle.size() > 0) {
-        circle.node().dispatchEvent(new Event("mouseover"));
-      }
-  }); 
+      .text(function(d){if(d.id != 0) return d.id;})
+      .on("mouseover", function(d, i) {
+          var circle = node.filter(function(data, index) {
+            return index === i.index;
+          });
+          circle.node().dispatchEvent(new Event("mouseover"));
+      })
+      .on("mouseout", function(d, i) {
+        var circle = node.filter(function(data, index) {
+          return index === i.index;
+        });
+        circle.node().dispatchEvent(new Event("mouseout"));
+    });  
     // Function to update simulation center on window resize
     function createSimulation() {
+      centerX = window.innerWidth / 2;
+      centerY = window.innerHeight / 2 -200;
         simulation = d3.forceSimulation(nodes)
             .force("link", d3.forceLink(links).id(d => d.id).distance(300))
             .force("charge", d3.forceManyBody().strength(-100)) // Increase repulsion between nodes
@@ -198,12 +207,13 @@
 
     // Handle mouseover event
     function handleMouseOver(d, i) {
-        d3.select(this).attr("fill", "orange");
+      if(isChapterActive[i.id] === 0) return
+      d3.select(this).style("fill", "orange");
     }
 
     // Handle mouseout event
     function handleMouseOut(d, i) {
-        d3.select(this).attr("fill", "steelblue");
+        d3.select(this).style("fill", d.originalColor);
     }
     window.addEventListener('load', createSimulation);
     window.addEventListener('resize', createSimulation);
