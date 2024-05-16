@@ -1,6 +1,7 @@
 var introText = `
 <h1> Minding With You </h1>
 <h2> Annotations for <i>Mind in Life</i> by Evan Thompson</h2>
+<h4> Select A Chapter to Begin </h4>
 <p>By the CGSC 253 class at Carleton College, Spring 2024</p>
 <p>With Prof. Jay McKinney</p>`
 
