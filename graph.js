@@ -5,10 +5,12 @@ var svg, link, node, nodeLabels;
 const graphR = 300, circleR = 50;
 var centerX, centerY;
 var simulation;
+//Stage 0: home page; Stage 1: Chapter & Topics; Stage 2: Annotations
+var stage = 0
 const isChapterActive = [0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1]
 const nodeColors = ["lightgray","#EDB4E9", "#EDB4E9", "#EDB4E9", "#EDB4E9", "#00C6AA", "#00C6AA", "#00C6AA", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF"]
 
-window.addEventListener('load', initialize);
+initialize()
 window.addEventListener('load', createSimulation);
 window.addEventListener('resize', createSimulation);
 
@@ -55,6 +57,7 @@ function initialize(){
     .on("click", function(d, i) {
       findNode(i).node().dispatchEvent(new Event("click"));
     });
+    updateNodes();
 }
 
 // Function to update simulation center on window resize
@@ -62,7 +65,7 @@ function createSimulation() {
   var container = document.getElementById('svg container').getBoundingClientRect();
   centerX = container.left + container.width/2;
   centerY = container.top + container.height/2 - 150;
-  updateNodes()
+  updateNodes();
   simulation = d3.forceSimulation(nodes)
       .force("link", d3.forceLink(links).id(d => d.id).distance(300))
       .force("charge", d3.forceManyBody().strength(-100)) // Increase repulsion between nodes
@@ -83,70 +86,99 @@ function createSimulation() {
 }
 
 function updateNodes(){
-  nodes[0].fx = centerX;
-  nodes[0].fy = centerY;
-  const angleStep = (2 * Math.PI) / (numNodes - 1); // excluding the center node
-  for (let i = 1; i < numNodes; i++) {
-      const angle = (i - 1) * angleStep - Math.PI/2;
-      nodes[i].fx = centerX + graphR * Math.cos(angle);
-      nodes[i].fy = centerY + graphR * Math.sin(angle);
+  if(stage == 0){
+    nodes[0].fx = centerX;
+    nodes[0].fy = centerY;
+    const angleStep = (2 * Math.PI) / (numNodes - 1); // excluding the center node
+    for (let i = 1; i < numNodes; i++) {
+        const angle = (i - 1) * angleStep - Math.PI/2;
+        nodes[i].fx = centerX + graphR * Math.cos(angle);
+        nodes[i].fy = centerY + graphR * Math.sin(angle);
+    }
   }
 }
 
-function findNode(i){
-  var circle = node.filter(function(data, index) {
-    return index === i.index;
-  });
-  return circle
-}
 
-function handleMouseOver(d, i) {
-  if(isChapterActive[i.id] === 0) return
+function handleMouseOver(event, d) {
+  if(isChapterActive[d.id] === 0 || (stage != 0 && !d.isToggled)) return
   d3.select(this).style("cursor", "pointer");
-  if(i.isToggled) return
   d3.select(this).style("fill", "#ffd7b5");
+  if(d.isToggled) return
+  updateChapterIntro(d.id)
 }
 
-function handleMouseOut(d, i) {
+function handleMouseOut(event, d) {
+  if(isChapterActive[d.id] === 0|| (stage != 0 && !d.isToggled)) return
+  console.log(d)
   d3.select(this).style("cursor", "default");
-  if(i.isToggled) return
   d3.select(this).style("fill", d.originalColor);
+  if(d.isToggled) return
+  showHomeIntro()
 }
 
 function toggleConnections(event, d) {
-  if(isChapterActive[d.id] === 0 || d.isToggled) return
-  d.isToggled = 1 - d.isToggled
-
-  node.transition()
-  .duration(1000)
-  .attr("cx", d.x)
-  .attr("cy", d.y)
-  .on("end", () => {
+  if (stage == 0){
+    if(isChapterActive[d.id] === 0 || d.isToggled) return
+    d.isToggled = 1 - d.isToggled
+    stage = 1;
     node.transition()
     .duration(1000)
-    .attr("cx", centerX)
-    .attr("cy", centerY);
-  });
-
-  nodeLabels.transition()
-  .duration(1000)
-  .style("opacity", function(label){
-    if (label.id === d.id) return 1;
-    else return 0;
-  })
-  .on("end", () => {
-  nodeLabels.transition()
-  .duration(1000)
-  .attr("x", centerX)
-  .attr("y", centerY);
-  });
-  link.transition()
-  .duration(1000)
-  .style("opacity", 0);
+    .attr("cx", d.x)
+    .attr("cy", d.y)
+    .style("opacity", function(node){
+      if (node.id === d.id) return 1;
+      else return 0;
+    })
+    .on("end", () => { 
+      node.transition()
+      .duration(1000)
+      .attr("cx", centerX)
+      .attr("cy", centerY)
+    });
+    nodeLabels.transition()
+    .duration(1000)
+    .style("opacity", function(label){
+      if (label.id === d.id) return 1;
+      else return 0;
+    })
+    .on("end", () => {
+    nodeLabels.transition()
+    .duration(1000)
+    .attr("x", centerX)
+    .attr("y", centerY);
+    });
+    link.transition()
+    .duration(1000)
+    .style("opacity", 0)
+    .on(end,() => {
+    for (let i = 1; i < numNodes; i++) {
+        nodes[i].fx = centerX;
+        nodes[i].fy = centerY;
+    }
+    })
+  }
 }
 
 function clicked(event, d) {
   node.classed("active", false);
   d3.select(this).classed("active", true);
   
+}
+
+function updateChapterIntro(chapterID){
+  fetch('./chapterintro.json?cacheBuster=${cacheBuster}')
+  .then(response => response.json())
+  .then(data => {
+        for (let element of data){
+          if (element['chapter'] === chapterID){
+            updateHTML(textContainer, element['content']);
+            chapterFound = 1;
+            break;
+          }
+        }
+      })
+}
+
+function showHomeIntro(){
+  updateHTML(textContainer, introText);
 }

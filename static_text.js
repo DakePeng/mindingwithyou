@@ -13,6 +13,7 @@ var contactText = `
 <h1> Contact Us </h1>
 <p>Random Text</p>`
 
+
 const textContainer = document.getElementById("text-content");
 
 updateHTML(textContainer, introText)
