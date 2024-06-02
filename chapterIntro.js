@@ -10,7 +10,7 @@ const chapterIntroData = [
     },
     {
         "chapter": 3,
-        "content": "<h1>Chapter 3: Autonomy and Emergence</h1><p><i>Enactivism</i> trys to describe autonomy in a dynamic system where the participants are always interacting with one another. For a system to be <i>autonomous>/i?, it should be constantly determine itself through maintaining the boundaries between itself and the environment. Another idea core to this argument is Emergence, the idea that higher orders of cognition is built upon convolutions of layers of systems.</p>"
+        "content": "<h1>Chapter 3: Autonomy and Emergence</h1><p><i>Enactivism</i> trys to describe autonomy in a dynamic system where the participants are always interacting with one another. For a system to be <i>autonomous</i>, it should be constantly determine itself through maintaining the boundaries between itself and the environment. Another idea core to this argument is Emergence, the idea that higher orders of cognition is built upon convolutions of layers of systems.</p>"
     },
     {
         "chapter": 4,
@@ -34,7 +34,7 @@ const chapterIntroData = [
     },
     {
         "chapter": 9,
-        "content": "<h1>Chapter 9: Sensorimotor Subjectivity</h1><p>This chapter discusses senses and perception. It points out that these activities are not purely passive, but also involves a bodily exploration of the word through motor movements. It is this interaction that brings us an understanding of our <i>self</i>, which allows us to establish a <i>subjectivity</i>.</p>"
+        "content": "<h1>Chapter 9: Sensorimotor Subjectivity</h1><p>This chapter discusses <i>senses</i> and <i>perception</i>. It points out that these activities are not purely passive, but also involves a bodily exploration of the word through <i>motor movements</i>. It is this interaction that brings us an understanding of our <i>self</i>, which allows us to establish a <i>subjectivity</i>.</p>"
     },
     {
         "chapter": 10,
@@ -46,7 +46,7 @@ const chapterIntroData = [
     },
     {
         "chapter": 12,
-        "content": "<h1>Chapter 12: Primordial Dynamism: Emotion and Valence</h1><p>For Enactivism, Emotion is not an internal status but rather an outward movement. It is spawned in the dynamic interchanging between the body and the environment and the different ways of percieving valences, or values, that this body-environmrnt coupling provides. It is followed by an action that your entire body participates in, as limb and muscle movements, facial expressions, or even as invisible as change in your internal chemical systems.</p>"
+        "content": "<h1>Chapter 12: Primordial Dynamism: Emotion and Valence</h1><p>For <i>Enactivism</i>, <i>Emotion</i> is not an internal status but rather an outward movement. It is spawned in the dynamic interchanging between the body and the environment and the different ways of percieving valences, or values, that this body-environmrnt coupling provides. It is followed by an action that your entire body participates in, as limb and muscle movements, facial expressions, or even as invisible as change in your internal chemical systems.</p>"
     },
     {
         "chapter": 13,

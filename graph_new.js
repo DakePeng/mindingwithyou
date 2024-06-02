@@ -65,7 +65,7 @@ function drawChapters() {
         if(isChapterActive[d.index] == 0 || stage == 1) return
         d3.select(this).style("cursor", "pointer");
         d3.select(this).select("circle").style("fill", "#ffd7b5");
-        showChapterIntro(d.index)
+        showChapterIntroStage0(d.index)
       }
       
     function handleMouseOutNode(event, d) {
@@ -295,7 +295,8 @@ function drawSections(data){
         d3.select("#box-" + index).style("cursor", "pointer");
         d3.select("#rect-" + index).style("fill", "#ffd7b5");
         let sectionIntro = getSectionIntro(sectionIntroData, selectedChapterData.index, sectionNames[index]);
-        updateHTML(textContainer, `<div class = "intro-text">` + sectionIntro + `</div>`)
+        let sectionIntroHTML = `<div class = "intro-text">` + sectionIntro + `</div>`
+        updateHTML(textContainer, sectionIntroHTML)
     }
 
     function handleMouseOutBox(index) {
@@ -306,7 +307,7 @@ function drawSections(data){
             let sectionAnnotations = getSectionHTMLContent(chapterData, sectionNames[clickedNode])
             updateHTML(textContainer, sectionAnnotations)
         }
-        else showChapterIntro(selectedChapterData.index)
+        else showChapterIntroStage1(selectedChapterData.index)
     }
 
     function handleClick(index){
@@ -314,7 +315,7 @@ function drawSections(data){
         if(isClicked && clickedNode == index) {
             isClicked = false
             clickedNode = -1;
-            showChapterIntro(selectedChapterData.index)
+            showChapterIntroStage1(selectedChapterData.index)
             return
         }
         isClicked = true;
@@ -329,8 +330,13 @@ function getColor(d){
     return d.color;
 }
 
-function showChapterIntro(chapterID){
-    updateHTML(textContainer, `<div class = "intro-text">` + chapterIntroData[chapterID - 1].content + `</div>`);
+function showChapterIntroStage1(chapterID){
+    let chapterIntroHTML = `<div class = "intro-text">` + chapterIntroData[chapterID - 1].content + `<p><b>Select a Section to Proceed</b></p></div>`
+    updateHTML(textContainer, chapterIntroHTML );
+}
+function showChapterIntroStage0(chapterID){
+    let chapterIntroHTML = `<div class = "intro-text">` + chapterIntroData[chapterID - 1].content + `<p><b>Click to Proceed</b></p></div>`
+    updateHTML(textContainer, chapterIntroHTML );
 }
 
 function showHomeIntro(){
