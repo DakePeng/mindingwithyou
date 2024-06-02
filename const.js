@@ -19,7 +19,7 @@ const introText = `
 
 const aboutText = `
 <h1> About This Project </h1>
-<p>Random Text</p>`
+<p><i>mindingwithyou</i> is the final project of Dake Peng for CGSC 253. It is an interactive webpage that </p>`
 const contactText = `
 <h1> Contact Us </h1>
 <p>Random Text</p>`
