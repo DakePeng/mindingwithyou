@@ -3,7 +3,7 @@
   const repo = 'DakePeng/mindingwithyou';
   // Replace 'path/to/your.json' with the path to your JSON file in the repository
   const jsonFilePath = 'annotation.json';
-  const response = await fetch(`https://raw.githubusercontent.com/${repo}/main/${jsonFilePath}`)
+  const response = await fetch(`https://raw.githubusercontent.com/${repo}/main/${jsonFilePath}`, { mode: 'no-cors' })
   const docData = await response.json();
   console.log(docData)
 
