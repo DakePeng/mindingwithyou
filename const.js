@@ -5,12 +5,9 @@ var isChapterActive = [];
 const nodeColors = ["lightgray","#EDB4E9", "#EDB4E9", "#EDB4E9", "#EDB4E9", "#00C6AA", "#00C6AA", "#00C6AA", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF"];
 const numChapters = 13;
 
-// const annotationDataPath = './annotation.json';
-// const chapterIntroDataPath = './chapterintro.json';
-// const sectionIntroDataPath = './sectionintro.json';
-const annotationDataPath = 'https://github.com/DakePeng/mindingwithyou/blob/main/annotation.json'
-const chapterIntroDataPath = 'https://github.com/DakePeng/mindingwithyou/blob/main/chapterIntro.json';
-const sectionIntroDataPath = './https://github.com/DakePeng/mindingwithyou/blob/main/sectionintro.json';
+const annotationDataPath = './annotation.json';
+const chapterIntroDataPath = './chapterintro.json';
+const sectionIntroDataPath = './sectionintro.json';
 var annotationData, chapterIntroData, sectionData;
 
 const introText = `

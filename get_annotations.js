@@ -9,6 +9,8 @@ async function fetchAndStoreJSON(url) {
     }
 }
 
+
+
 function getActiveChapters(annotationData){
     let active_chapters = new Array(13).fill(0);
     let chapters = annotationData.map(d => d['Chapter'])
