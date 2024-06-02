@@ -123,7 +123,7 @@ function drawSections(data){
     const circleX = circleRadius * 3;
     const circleY = centerY;
     const rectWidth = width * 0.5;
-    const rectHeight = height * 0.06;
+    const rectHeight = height * 0.075;
     const rectSpacing = height *0.08;
     const cornerRadius = rectHeight/5
     const chapterData = getChapterData(annotationData, selectedChapterData.index)
@@ -295,7 +295,7 @@ function drawSections(data){
         d3.select("#box-" + index).style("cursor", "pointer");
         d3.select("#rect-" + index).style("fill", "#ffd7b5");
         let sectionIntro = getSectionIntro(sectionIntroData, selectedChapterData.index, sectionNames[index]);
-        updateHTML(textContainer, sectionIntro)
+        updateHTML(textContainer, `<div class = "intro-text">` + sectionIntro + `</div>`)
     }
 
     function handleMouseOutBox(index) {
@@ -330,7 +330,7 @@ function getColor(d){
 }
 
 function showChapterIntro(chapterID){
-    updateHTML(textContainer, chapterIntroData[chapterID - 1].content);
+    updateHTML(textContainer, `<div class = "intro-text">` + chapterIntroData[chapterID - 1].content + `</div>`);
 }
 
 function showHomeIntro(){
