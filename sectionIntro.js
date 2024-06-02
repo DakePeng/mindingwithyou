@@ -127,12 +127,12 @@ const sectionIntroData = [
     {
         "Chapter": "13",
         "Section": "Intentionality and Open Intersubjectivity",
-        "Content": "<h1>Intentionality and Open Intersubjectivity</h1> <p>Random Text</p>"
+        "Content": "<h1>Intentionality and Open Intersubjectivity</h1><p>Random Text</p>"
     },
     {
         "Chapter": "13",
         "Section": "The Phenomenological Concept of Empathy",
-        "Content": "<h1>The Phenomenological Concept of Empathy</h1> <p>Random Text</p>"
+        "Content": "<h1>The Phenomenological Concept of Empathy</h1><p>Random Text</p>"
     },
     {
         "Chapter": "13",
