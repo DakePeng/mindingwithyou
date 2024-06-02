@@ -238,6 +238,7 @@ function drawSections(data){
                     .attr("id", "text-" + d.index)
                     .style("margin", "0")
                     .style("font-size", "1.2vw")
+                    .style("font-style", "italic")
                     .style("text-align", "center")
                     .style("color", "black")
                     .style("white-space", "normal") // Allow text wrapping
