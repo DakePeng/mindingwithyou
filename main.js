@@ -4,14 +4,14 @@
 //     chapterIntroData = await fetchAndStoreJSON(chapterIntroDataPath);
 //     sectionIntroData = await fetchAndStoreJSON(sectionIntroDataPath);
 //     // Generate random data for nodes and links
-//     isChapterActive = getActiveChapters(annotationData)
+//     
 //   } catch (error) {
 //       console.error('An Error Occurred: ', error);
 //   }
 // })();  
 
-getSectionIntro(sectionIntroData, 3, "Intro")
 stage = 0;
+isChapterActive = getActiveChapters(annotationData)
 // Initial drawing of the circles
 drawChapters();
 updateHTML(textContainer, introText);

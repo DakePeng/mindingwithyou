@@ -298,7 +298,6 @@ function drawSections(data){
     }
 
     function handleMouseOutBox(index) {
-        console.log(isClicked)
         if(isClicked && clickedNode == index) return;
         d3.select("#box-" + index).style("cursor", "default");
         d3.select("#rect-" + index).style("fill", "none");
@@ -310,7 +309,6 @@ function drawSections(data){
     }
 
     function handleClick(index){
-        console.log(index)
         d3.select("#rect-" + clickedNode).style("fill", "none");
         if(isClicked && clickedNode == index) {
             isClicked = false
