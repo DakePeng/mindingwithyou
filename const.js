@@ -22,7 +22,7 @@ const aboutText = `
 <p><i>mindingwithyou</i> is the final project of Dake Peng for CGSC 253. It is an interactive webpage that guides readers through <i>Evan Thompson's</i> book <i>Mind in Life</i>. The website displays introduction to 6 different chapters of the book and showcases the classes's annotation on different sections.</p>`
 const contactText = `
 <h1> Contact Us </h1>
-<p>Random Text</p>`
+<p>If you are intersted in this project, please contact Dake Peng at pengd@carleton.com</p>`
 
 const textContainer = document.getElementById("text-content")
 const homeButton = document.getElementById("home-button");
