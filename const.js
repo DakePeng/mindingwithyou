@@ -5,10 +5,10 @@ var isChapterActive = [];
 const nodeColors = ["lightgray","#EDB4E9", "#EDB4E9", "#EDB4E9", "#EDB4E9", "#00C6AA", "#00C6AA", "#00C6AA", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF", "#70D6FF"];
 const numChapters = 13;
 
-const annotationDataPath = './annotation.json';
-const chapterIntroDataPath = './chapterintro.json';
-const sectionIntroDataPath = './sectionintro.json';
-var annotationData, chapterIntroData, sectionData;
+// const annotationDataPath = './annotation.json';
+// const chapterIntroDataPath = './chapterintro.json';
+// const sectionIntroDataPath = './sectionintro.json';
+// var annotationData, chapterIntroData, sectionData;
 
 const introText = `
 <h1> Minding With You </h1>

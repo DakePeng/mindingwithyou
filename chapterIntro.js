@@ -1,4 +1,4 @@
-[
+const chapterIntroData = [
     {
         "chapter": 1,
         "content": "<h1> Chapter 1: Cognitive Science and Human Experience</h1><p>Random Text</p>"

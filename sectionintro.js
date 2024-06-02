@@ -1,4 +1,4 @@
-[
+const sectionIntroData = [
     {
         "Chapter": "2",
         "Section": "Intro",

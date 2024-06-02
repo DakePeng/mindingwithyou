@@ -1,4 +1,4 @@
-[
+const annotationData = [
     {
         "Chapter": "2",
         "Section": "Intro",
