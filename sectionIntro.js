@@ -147,7 +147,7 @@ const sectionIntroData = [
     {
         "Chapter": "13",
         "Section": "Intro",
-        "Content": "<h1>Intro</h1> <p>Random Text</p>"
+        "Content": "<h1>Intro</h1>"
     },
     {
         "Chapter": "13",
