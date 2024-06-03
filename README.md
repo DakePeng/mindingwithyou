@@ -7,4 +7,4 @@ The work is done by the Spring 2024 class of CGSC 253 at Carleton College, North
 
 To add new annotations to the website, simply modify _annotation.js_ and add entries according to the existing format
 
-Remember to add cection introductions to _sectionintro.js_ and chapter introductions to _chapterintro.js_
+Remember to add cection introductions to _sectionintro.js_ and chapter introductions to _chapterintro.js_ when you include annotations from a new chapter

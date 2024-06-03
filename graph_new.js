@@ -124,7 +124,7 @@ function drawSections(data){
     const circleY = centerY;
     const rectWidth = width * 0.5;
     const rectHeight = height * 0.075;
-    const rectSpacing = height *0.08;
+    const rectSpacing = height *0.05;
     const cornerRadius = rectHeight/5
     const chapterData = getChapterData(annotationData, selectedChapterData.index)
     const sectionNames = getSections(chapterData)

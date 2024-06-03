@@ -928,6 +928,222 @@ const annotationData = [
         "Type": "Add Context, Connection"
     },
     {
+        "Chapter": "8",
+        "Section": "Consciousness and Life",
+        "Page": "222",
+        "Quote": "For if the facts of experience—facts about what it is like for the experiencing organism —are accessible only from one point of view [the subjective point of view], then it is a mystery how the true character of experiences could be revealed in the physical operation of that organism . . . The problem is unique. If mental processes are physical processes, then there is something it is like, intrinsically, to undergo certain physical processes. What it is for such a thing to be the case remains a mystery. (1979, pp. 172,175)",
+        "Annotation": "This reminds me of the idea that linguistic modes of systems are far less efficient and precise than dynamic modes of system. How then do we understand the relationship between our linguistic description of consciousness and the part of consciousness being described? This I think is a question for both Cartesians and embodied people.",
+        "Type": "Question, Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Consciousness and Life",
+        "Page": "225",
+        "Quote": "The interiority of life is the interiority of selfhood and sense-making, which is a precursor to the interiority of consciousness. A living being enacts a milieu marked by significance and valence. Exteriority is surmounted by an internal relation of meaning and normativity between the two poles of organism and milieu. There is thus an inwardness to life that escapes a purely external conception. ",
+        "Annotation": "This relates to what Thompson said in Chapter 4 about the asymmetry between the internal and the external world! There has to be an inward meaning-making selfhood in order to have outside world relationships/meaning. It almost seems here that Thompson is saying that interiority comes \"first,\" and then exteriority and meaning-making come second (to the organism). ",
+        "Type": "Add Context, Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Consciousness and Life",
+        "Page": "225",
+        "Quote": "The problem with the dualistic concepts of consciousness and life in standard formulations of the hard problem is that they exclude each other by construction... To reduce conscious experience to external structure and function would be to make consciousness disappear (materialism)",
+        "Annotation": "Why does reducing consciousness to external structure and function make it \"disappear\"? When we're dealing with knowing the mental states of others, we already make this kind of reduction by studying their environment and behaviour. When introspecting about our own mental states, we can know them right away without appealing to our own behaviour, but our interior mental states are still continuous with \"external structure and function\" - otherwise how could other people know what we think? ",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Consciousness and Life",
+        "Page": "225",
+        "Quote": "My point is rather that to make headway on the problem of consciousness we need to go beyond the idea that life is simple an \"external\" phenomenon in the usual materialist sense. Contrary to both dualism and materialism, life or living being is already beyond the gap between \"internal\" and \"external.\" A purely external or outside view of structure and function is inadequate for life.  A living body is not sheer exteriority (partes extra partes) but instead embodies a kind of interiority, that of its own immanent purposiveness. This interiority, as we have seen, comprises the self-production of an inside that specifies an outside to which that inside is constitutively and normatively related. ",
+        "Annotation": "Life integrates what may be traditionally be seen completely separate—internal subjective experiences and external (perhaps viewed in a reductionist manner) realities. This reminds me how in generative phenomenology, there's a focus on the life-world as the horizon of experience and how experience and the horizon (or the externality) must be understood in relation to each other like the figure/ground relationship in Gestalt psychology.",
+        "Type": "Add Context, Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Consciousness and Life",
+        "Page": "225",
+        "Quote": "As Heidegger points out, a living being is \"in\" its world in a sense completely different from that of water being in a glass. The interiority of life is the interiority of selfhood and sense-making, which is a precursor to the interiority of consciousness. A living being enacts a milieu marked by significance and valence. Exteriority is surmounted by an internal relation of meaning and normatively between the two poles of organism and milieu. There is thus an inwardness to life that escapes a purely external conception. This inwardness underlies the deep continuity of life and mind, and is the context in which the emergence of consciousness must be understood.",
+        "Annotation": "This passage highlights the lack of any static-ness to a living entity being \"in\" it's world. It's not just that it's plopped in there, no questions asked and not interacting with its environment (like water in a glass), but it's embedded, relating with, and interpreting the environment. The \"interiority\" mentioned here suggests that living beings engage with their environments through a layer of subjective meaning, and participate in the generation of meaning through their interactions, thus co-creating the environment.",
+        "Type": "Add Context"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Consciousness and Life",
+        "Page": "225",
+        "Quote": "As Heidegger points out, a living being is \"in\" its world in a sense completely different from that of water being in a glass. The interiority of life is the interiority of selfhood and sense-making, which is a precursor to the interiority of consciousness. A living being enacts a milieu marked by significance and valence. Exteriority is surmounted by an internal relation of meaning and normatively between the two poles of organism and milieu. There is thus an inwardness to life that escapes a purely external conception. This inwardness underlies the deep continuity of life and mind, and is the context in which the emergence of consciousness must be understood.",
+        "Annotation": "What implications does the concept of 'interiority' have for our understanding of personal experience and responsibility in defining one's being?",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Descarte's Legcy",
+        "Page": "229",
+        "Quote": "But if the conscious mind and the living body are thus completely different, then the fact that they form a distinct unity in each individual human being in incomprehensible. ",
+        "Annotation": "I don't know if \"incomprehensible\" is the best way to phrase this-- it sounds like Descartes was describing two puzzle pieces or something similar. I also think it's too strong of a word when considering Descartes's frame of reference; if you believe in God and the afterlife, then this idea that you can exist without your body *does* make sense. I think Thompson gives short shrift the religious idea here (he only mentions it once), and hating on Descartes without really mentioning why Descartes believed in a separable mind/body feels disingenuous. ",
+        "Type": "Add Context, Criticism"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "231",
+        "Quote": "Without proprioceptive and kinesthetic experience, for example, many kinds of normal perception and motor action cannot happen.",
+        "Annotation": "I wonder what the enactivist would say about zombie-like experiences, such as sleepwalking or episodes in which the person isn't aware of what they're doing? Or even being black-out drunk?",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "231",
+        "Quote": "This thought seems incomprehensible. We are asked to imagine a\nliving being, a human organism, whose bodily life is identical with respect to its physical structure and function to that of a conscious\nhuman being, but that has no bodily sentience, no subjective experience of its bodily existence and environment",
+        "Annotation": "How is the idea of a zombie possibly connected to the concept of AI?",
+        "Type": "Question, Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "232",
+        "Quote": "perceptual continuity--the continuity of the object through a changing manifold of appearances--depends on this linkage of kinesthesis and perception ",
+        "Annotation": "This reminds me of those stop-motion clips of drawings where you can look at images a few pages apart and have them be totally different but because you see them being flipped through, you're able to track that it's the same thing. Similar to the games where you try to identify a shadow by rotating a weirdly shaped object in terms of having to relate moving the object and perception/their interaction to make sense of the object. ",
+        "Type": "Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "232",
+        "Quote": "These absent profiles stand in a certain relation to the present one: they can become present if one carries out certain movements. In other words, they are correlated to one's kinesthetic system of possible bodily movements and positions. If one movies this way, then that aspect of the object becomes visible; if one moves that way, then this aspect becomes visible. In Husserl's terminology, perception is \"kinesthetically motivated.\"",
+        "Annotation": "This passage is talking about how perception is connected to embodiment, specifically bodily movement. Perception isn't just a static view, it's connected to our potential to move our body around to continuously gain new viewpoints. This also reminds me of how some optical illusions require you to be in a very particular position in order to experience the illusion, and often individuals' responses will just be to move slightly to see it at a different angle (such as when there's something drawn in a particular way to make it look 3d).",
+        "Type": "Add Context"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "232",
+        "Quote": "These absent profiles stand in a certain relation to the present one: they can become present if one carries out certain movements. In other words, they are correlated to one's kinesthetic system of possible bodily movements and positions. If one movies this way, then that aspect of the object becomes visible; if one moves that way, then this aspect becomes visible. In Husserl's terminology, perception is \"kinesthetically motivated.\"",
+        "Annotation": "This idea challenges the notion that perception is a passive experience that happens onto an individual, and highlights the role cognition and embodiment play. One question I have is: to what extent does the kinesthetic nature of perception influence cognitive strategies and capabilities in problem-solving?",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "233",
+        "Quote": "bodily experience is constitutive of the perceptual function of individuating continuous objects in space through a manifold of sensory appearances",
+        "Annotation": "Is this saying having a lived body is being able to perceive (in different ways?) what is going on in your environment over time? ",
+        "Type": "Question, Translation"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "234",
+        "Quote": "\"Perhaps bodily processes belong to the minimally sufficient condition for consciousness and the “vat” would have to be a surrogate body.\"",
+        "Annotation": "Thompson's answer to the brain in a vat problem is simply that if the vat allowed our brain to function correctly, it would need to possess all of the functions that our body has therefore, hasn't it just become a body? Therefore, this seems to imply that consciousness cannot just be confined to our brain but includes our body as well. Assuming this hypothesis, this leads me to make a connection to Birhane's paper. If we think of a LLM or a machine claiming to imitate human cognition, how could it ever be conscious unless the container that machine is held in (vat) has the same relationship with the \"brain\" of the machine as a human's brain has to its body? ",
+        "Type": "Question, Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "234",
+        "Quote": "What does seem true is that the scenario will seem conceivable to anybody who is under the sway of the Cartesian concept of consciousness and who has not thought carefully about what the scenario, strictly described, actually demands of one’s imagination, in particular with regard to the phenomenology of bodily experience.",
+        "Annotation": "I'm fully on board with the embodied presumptions and hence the zombie argument is pretty acceptable to me. I can see, however, that it will not persuade someone with deeply rooted Cartesian worldviews --- here rational arguments are not enough. We need some other approaches of persuation, especially when it's not in an academic setting and people are not forced to listen to you. I guess wrapping the embodied thoughts in dynamic systems is a good approach to start a conversation.",
+        "Type": "Connection, Thought on how to make enactivism accesible."
+    },
+    {
+        "Chapter": "8",
+        "Section": "Zombies: A Phenomenological Critique",
+        "Page": "234",
+        "Quote": "Phenomenologists distinguish between two ways the body can be disclosed or constituted in experience—as a material thing and as a living subject of experience or lived body. We need to refine this distinction, however, for at least two reasons. First, we need to guard against the danger of reifying a phenomenological distinction between two ways our body can be disclosed into an ontological duality. The body can be disclosed as a physical body and as a lived body, but this does not imply that there are two bodies or that the body has two mutually irreducible, metaphysical properties or aspects. Second, even this distinction between two modes of bodily presence, correlated with two ways of experiencing the body, is inadequate, because it does not convey the diversity of ways the body can be disclosed in our experience.",
+        "Annotation": "What differences are there regarding how the lived body is perceived and disclosed to the individual between different cultures?",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "The Body-Body Problem",
+        "Page": "235",
+        "Quote": "Yet many of the perceptual and motor abilities of one’s physical living body (the body as Körper) evidently depend on that body’s being a subjectively lived body (a Leib). Without proprioceptive and kinesthetic experience, for example, many kinds of normal perception and motor action cannot happen.",
+        "Annotation": "I have been thinking about the parallel of Korpor-Leib with another pair of concepts in biopolitics: Bios (the political and social life) and Zoe (bare, animal life). At states of exception (let's say COVID), some people's lives get reduced from Bios to Zoe (through forced quarantine, for exampe), thus becoming the so called Homo Sacer --- someone who is divorced or exciled from society. I wonder if enactivists will accept this distinction (obviously with political motivations), or even a mapping between the two pairs. ",
+        "Type": "Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "The Body-Body Problem",
+        "Page": "235",
+        "Quote": "Phenomenologists distinguish between two ways the body can be disclosed or constituted in experience—as a material thing and as a living subject of experience or lived body. We need to refine this distinction, however, for at least two reasons. First, we need to guard against the danger of reifying a phenomenological distinction between two ways our body can be disclosed into an ontological duality. The body can be disclosed as a physical body and as a lived body, but this does not imply that there are two bodies or that the body has two mutually irreducible, metaphysical properties or aspects. Second, even this distinction between two modes of bodily presence, correlated with two ways of experiencing the body, is inadequate, because it does not convey the diversity of ways the body can be disclosed in our experience.",
+        "Annotation": "This passage rejects ontological duality, which in this case is the understanding of the body being viewed as two discrete entities (physical and lived). These aren't separate ways of being but are simply different aspects of how we come to experience and understand the body.",
+        "Type": "Translation"
+    },
+    {
+        "Chapter": "8",
+        "Section": "The Body-Body Problem",
+        "Page": "236",
+        "Quote": "Husserl had to avail himself of a variety of terms for the spectrum of differentiated ways the body can be disclosed.",
+        "Annotation": "What are some examples of the differentiated ways that the body can be disclosed? ",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "The Body-Body Problem",
+        "Page": "237",
+        "Quote": "\"The lived body is the living body; it is a dynamic condition of the living body. We could say that our lived body is a performance of our living body, something our body enacts in living.\"",
+        "Annotation": "I am confused by what Thompson means when he says the lived body is a performance of our living body. Furthermore, how is this connected to the body-body problem and how does this attempt to get at answering that problem?",
+        "Type": "Question, Jargon"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Biological Naturalism",
+        "Page": "238",
+        "Quote": "It is the closed system that are organizationally special or nongeneric, not the open ones.",
+        "Annotation": "I understood the example of irrational and rational numbers. My question is, how does the physics-biology example fit in this concept? What does it mean for physics to be organizationally nongeneric?",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Biological Naturalism",
+        "Page": "241",
+        "Quote": "Even if the minimally sufficient condition for consciousness is indeed in the brain, it does not follow that we are nothing over and above our brains. ",
+        "Annotation": "I was thinking about muscle memory here (https://themusicessentials.com/editorials/how-muscle-memory-helps-people-learn-to-play-music/), especially because sometimes being conscious that I'm playing makes me mess up! ",
+        "Type": "Connection"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Biological Naturalism",
+        "Page": "242",
+        "Quote": "mind in vat last two paragraphs",
+        "Annotation": "just wanted to say this was good!! very helpful and easy to explain to anyone!!",
+        "Type": "Appreciation"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Biological Naturalism",
+        "Page": "243",
+        "Quote": "Rather, the guiding issue is to understand the emergence of living subjectivity from living being, where living being is understood as already possessed of an interiority that escapes the objectivist picture of nature. It is this issue of emergence that we need to address, not the Cartesian version of the hard problem.",
+        "Annotation": "this seems to imply that consciousness is not inherent to all life, but later, it sort of feels like he argues the other way. do we think that a cell is in some respects conscious and what would that mean",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Biological Naturalism",
+        "Page": "245",
+        "Quote": "\" Most of physics has been developed for thermodynamically closed rather than open systems, and especially not for autopoietic systems or living systems generally, which are precisely those systems for which individuality and interiority are applicable concepts. It is the closed systems that are organizationally special or nongeneric, not the open ones.\"",
+        "Annotation": "I don't think I know enough about physics or thermodynamics to understand the point that is being made here. could we maybe go over it in class",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Biological Naturalism",
+        "Page": "246",
+        "Quote": "\"In the case of consciousness, however, we cannot make this appearance/reality distinction because “consciousness consists in the appearances themselves” (Searle 1992, p. 122). Hence “the point of the reduction would be lost if we tried to carve off the appearance and simply defined consciousness in terms of the underlying physical reality”\"",
+        "Annotation": "This feels important, but I am not exactly sure what it is saying. I think it is saying that because consciousness is enhanced, what occurs when we move beyond the components trying to break it down into its most basic components is missing the point. I'm not sure though",
+        "Type": "Question"
+    },
+    {
+        "Chapter": "8",
+        "Section": "Biological Naturalism",
+        "Page": "238, 239",
+        "Quote": "Conscious states are constitutively first personal and therefore are ontologically irreducible to brain processes... At the same time, consciousness is causally reducible to the brain because it is entirely caused by lower level neurobiological processses (238) I think the irreducibility of consciousness is not trivial and indicates that consciousness has a transcendental status in addition to an empirical one (239)",
+        "Annotation": "I'm not sure what Thompson thinks are the implications for the the irreducibility of consciousness. It's more than just a linguistic problem, a consequence of our scientific and folk-psychological vocabulary, because that's what Searle thinks. If consciousness is \"ontologically irreducible\" - what problems does this actually cause?",
+        "Type": "Question"
+    },
+    {
         "Chapter": "9",
         "Section": "Intro",
         "Page": "244",
