@@ -335,7 +335,7 @@ function showChapterIntroStage1(chapterID){
     updateHTML(textContainer, chapterIntroHTML );
 }
 function showChapterIntroStage0(chapterID){
-    let chapterIntroHTML = `<div class = "intro-text">` + chapterIntroData[chapterID - 1].content + `<p><b>Click to Proceed</b></p></div>`
+    let chapterIntroHTML = `<div class = "intro-text">` + chapterIntroData[chapterID - 1].content + `</div>`
     updateHTML(textContainer, chapterIntroHTML );
 }
 
