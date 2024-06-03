@@ -24,7 +24,7 @@ const aboutText = `
 <h1> About This Project </h1>
 <p><i>mindingwithyou</i> is the final project of Dake Peng for CGSC 253. It is an interactive webpage that
 guides readers through <i>Evan Thompson's</i> book <i>Mind in Life</i>. The website displays introduction
-to 6 different chapters of the book and showcases the classes's annotation on different sections.</p>
+to 7 different chapters of the book and showcases the classes's annotation on different sections.</p>
 <p>The introduction to the chapters and sections are written or edited by Dake Peng from various documents
 that the class created during the course, and the annotations are created by all members of the class.</p>
 </div>`
