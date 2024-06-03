@@ -102,7 +102,7 @@ const sectionIntroData = [
     {
         "Chapter": "8",
         "Section": "Biological Naturalism",
-        "Content": "<h1>Biological Naturalism</h1><p>In parallel to Thompson, Seale proposes another solution to the <i>Mind Body Problem</i> such that mind is a subjective biological process spawning from the brain."
+        "Content": "<h1>Biological Naturalism</h1><p>In parallel to Thompson, Searle proposes another solution to the <i>Mind Body Problem</i> such that mind is a subjective biological process spawning from the brain."
     },
     {
         "Chapter": "9",
