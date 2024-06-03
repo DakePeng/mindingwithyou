@@ -32,12 +32,12 @@ const sectionIntroData = [
     {
         "Chapter": "3",
         "Section": "Dynamic Systems",
-        "Content": `<h1>Dynamic Systems</h1> <p>People and other animals are dynamic systems which change over time, and our cognitive systems should be explained dynamically, rather than in terms of symbol-processing. We can think of the space of all possible states of a system as a geometric space (state space), and the way the system changes or behaves over time as curves or trajectories in this space --- in this way we can model and study dynamic systems.</p><p><i>--- Grace, Kaori, Nativ</i></p>`
+        "Content": `<h1>Dynamic Systems</h1> <p>People and other animals are dynamic systems that change over time, and our cognitive systems should be explained dynamically, rather than in terms of symbol-processing. We can think of the space of all possible states of a system as a geometric space (state space), and the way the system changes or behaves over time as curves or trajectories in this space --- in this way we can model and study dynamic systems.</p><p><i>--- Grace, Kaori, Nativ</i></p>`
     },
     {
         "Chapter": "3",
         "Section": "Autonomous Systems",
-        "Content": "<h1>Autonomous Systems</h1> <p>In an <i>Autonomous System</i>, the constituent processes:1. Recursively depend on each other for generation and realization as a network; 2.Constitute the system as a unity in whatever domain they exist; and 3. Determine a domain of possible interactions with the environment.</p><p><i>--- Grace, Kaori, Nativ</i></p>"
+        "Content": "<h1>Autonomous Systems</h1> <p>In an <i>Autonomous System</i>, the constituent processes:1. recursively depend on each other for generation and realization as a network; 2.constitute the system as a unity in whatever domain they exist; and 3. determine a domain of possible interactions with the environment.</p><p><i>--- Grace, Kaori, Nativ</i></p>"
     },
     {
         "Chapter": "3",
@@ -82,12 +82,12 @@ const sectionIntroData = [
     {
         "Chapter": "8",
         "Section": "Consciousness and Life",
-        "Content": "<h1>Consciousness and Life</h1><p>Many think that consciousness and biological lives are seperate entities. This line of though has a long history and many different arguments are given.</p>"
+        "Content": "<h1>Consciousness and Life</h1><p>Many think that consciousness and biological lives are seperate entities. This line of thought has a long history and many different kinds of arguments.</p>"
     },
     {
         "Chapter": "8",
         "Section": "Descarte's Legcy",
-        "Content": "<h1>Descarte's Legcy</h1><p>Everything started with good old Rene, whose <i>cogito</i> introduces a seperation of the mind and the body."
+        "Content": "<h1>Descarte's Legcy</h1><p>Everything started with good old René, whose <i>cogito</i> introduces a seperation of the mind and the body."
     },
     {
         "Chapter": "8",
@@ -97,7 +97,7 @@ const sectionIntroData = [
     {
         "Chapter": "8",
         "Section": "The Body-Body Problem",
-        "Content": "<h1>The Body-Body Problem</h1><p>Maybe the <i>Mind-Body Problem</i> is hard because people are tipping over their own feet. The presumptions of that problem made the problem hard or impossible. On the contrary, if we think of consciousness as an activity of a lived body, things are much more appraochable."
+        "Content": "<h1>The Body-Body Problem</h1><p>Maybe the <i>Mind-Body Problem</i> is hard because people are tripping over their own feet. The presumptions of that problem made the problem hard or impossible. On the contrary, if we think of consciousness as an activity of a lived body, things are much more approachable."
     },
     {
         "Chapter": "8",
@@ -112,12 +112,12 @@ const sectionIntroData = [
     {
         "Chapter": "9",
         "Section": "Subjectivity and Bodily Self-Consciousness",
-        "Content": "<h1>Subjectivity and Bodily Self-Consciousness</h1><p>The rejection of the Catesian <i>Mind-Body Dualism</i> leads us to reconsider what the self, or <i>subject</i> is. If I am my body, then understanding myself necessariy encompasses understanding my body.</p>"
+        "Content": "<h1>Subjectivity and Bodily Self-Consciousness</h1><p>The rejection of the Catesian <i>Mind-Body Dualism</i> leads us to reconsider what the <i>subject</i>, or self, is. If I am my body, then understanding myself necessariy encompasses understanding my body.</p>"
     },
     {
         "Chapter": "9",
         "Section": "The Dynamic Sensorimotor Approach to Perceptual Consciousness",
-        "Content": "<h1>The Dynamic Sensorimotor Approach to Perceptual Consciousness</h1> <p>Random Text</p>"
+        "Content": "<h1>The Dynamic Sensorimotor Approach to Perceptual Consciousness</h1> <p>Under the dynamic systems approach, percpetion is also thought to be an interaction. My body travels and explores the envrironment, and thus I percieve.</p>"
     },
     {
         "Chapter": "12",
@@ -127,22 +127,22 @@ const sectionIntroData = [
     {
         "Chapter": "12",
         "Section": "Protention",
-        "Content": "<h1>Protention</h1><p>When we intend, we also make a connection with the near past and future. The connection to possible futures, or <i>protention/i>, discloses possibilities of action and thus e-motional.</p>"
+        "Content": "<h1>Protention</h1><p>When we intend, we also make a connection with the near past and future. The connection to possible futures, or <i>protention</i>, discloses possibilities of action and thus e-motional.</p>"
     },
     {
         "Chapter": "12",
         "Section": "Enactive Emotion",
-        "Content": "<h1>Enactive Emotion</h1> <p>Emotions are activities that happen across the brain, the neurosystem, and the entire body. To understand Emotions <i>Enactively</i>, therefore, involves studying the bodily systems from which these activities emerge.</p>"
+        "Content": "<h1>Enactive Emotion</h1> <p>Emotions are activities that happen across the brain, the neurosystem, and the entire body. To understand emotions <i>Enactively</i>, therefore, involves studying the bodily systems from which these activities emerge.</p>"
     },
     {
         "Chapter": "12",
         "Section": "A Neurodynamical Model",
-        "Content": "<h1>A Neurodynamical Model</h1> <p>In explanation of intiontional activities and emotions, <i>Neurodynamicists</i> like Walter Freeman have made models of the limbic system.</p>"
+        "Content": "<h1>A Neurodynamical Model</h1> <p>In explanation of intiontional activities and emotions, <i>Neurodynamicists</i> like Walter Freeman have made models of how the limbic system functions in interaction with the environment.</p>"
     },
     {
         "Chapter": "12",
         "Section": "Emotional Self-Organization",
-        "Content": "<h1>Emotional Self-Organization</h1> <p>As an actity of autonmous systems, emotion also functions in developing and organizing the system across diffent time spans, from the scale of seconds to years.</p>"
+        "Content": "<h1>Emotional Self-Organization</h1> <p>As an activity of autonmous systems, emotion also functions in developing and organizing the system across diffent time spans, from the scale of seconds to years.</p>"
     },
     {
         "Chapter": "13",
@@ -157,7 +157,7 @@ const sectionIntroData = [
     {
         "Chapter": "13",
         "Section": "The Phenomenological Concept of Empathy",
-        "Content": "<h1>The Phenomenological Concept of Empathy</h1><p>For Edith Stein, Empathy is a kind of intentionality towards other's experience. Contrary to the psychological description of empathy as feeling-response, this process is direct and unmediated.</p>"
+        "Content": "<h1>The Phenomenological Concept of Empathy</h1><p>For Edith Stein, empathy is a kind of intentionality towards other's experience. Contrary to the psychological description of empathy as feeling-response, this process is direct and unmediated.</p>"
     },
     {
         "Chapter": "13",
