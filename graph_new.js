@@ -295,7 +295,7 @@ function drawSections(data){
         d3.select("#box-" + index).style("cursor", "pointer");
         d3.select("#rect-" + index).style("fill", "#ffd7b5");
         let sectionIntro = getSectionIntro(sectionIntroData, selectedChapterData.index, sectionNames[index]);
-        let sectionIntroHTML = `<div class = "intro-text">` + sectionIntro + `<b> Click to proceed</b></div>`
+        let sectionIntroHTML = `<div class = "intro-text">` + sectionIntro + `<b>Click to proceed</b></div>`
         updateHTML(textContainer, sectionIntroHTML)
     }
 
