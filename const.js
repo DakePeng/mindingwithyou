@@ -15,7 +15,7 @@ const introText = `
 <h1> Minding With You </h1>
 <h2> Annotations for Evan Thompson's book <i>Mind in Life</i>
 <h4> Select A Chapter to Begin </h4>
-<p>By the CGSC 253 class at Carleton College, Spring 2024</p>
+<p>By the CGSC 253 class at Carleton College (Northfield, MN, United States), Spring 2024</p>
 <p>With Prof. Jay McKinney</p>
 </div>`
 
