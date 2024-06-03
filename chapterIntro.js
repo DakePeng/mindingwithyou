@@ -6,7 +6,7 @@ const chapterIntroData = [
     
     {
         "chapter": 2,
-        "content": "<h1>Chapter 2: The Phenomenological Connection</h1><p>There is a deep connection between <i>Enactivism</i>, the branch of Cognitive Science that Thompson is know for, and <i>Phenomenology</i>, a philosophical trend that started in the 20th century. <i>Phenomenology</i> sees cognition as a relationship between the subject and the object, and thus inviting a consideration of the environment and interaction when we study consciousness.</p>"
+        "content": "<h1>Chapter 2: The Phenomenological Connection</h1><p>There is a deep connection between <i>Enactivism</i>, the branch of Cognitive Science that Thompson is know for, and <i>Phenomenology</i>, a philosophical trend that started in the 20th century. <i>Phenomenology</i> sees cognition as a relationship between the subject and the object, and thus invites a consideration of the environment and interaction when we study consciousness.</p>"
     },
     {
         "chapter": 3,
@@ -30,7 +30,7 @@ const chapterIntroData = [
     },
     {
         "chapter": 8,
-        "content": "<h1>Chapter 8: Life beyond The Gap</h1><p>Philosphers have long been trapped by the so called <i>Mind-Body Problem</i>: how can we explain the gap between them? How does the mind control the body, or how does the body control the mind? For Thompson, this is a non-problem. The relationship happens between different parts of the body, or between different bodies."
+        "content": "<h1>Chapter 8: Life beyond The Gap</h1><p>Philosphers have long been trapped by the so called <i>Mind-Body Problem</i>: how can we explain the gap between them? How does the mind control the body, or how does the body control the mind? For Thompson, this is a non-problem. The relationship happens between different parts of the body, or between physical and lived bodies."
     },
     {
         "chapter": 9,
@@ -46,10 +46,10 @@ const chapterIntroData = [
     },
     {
         "chapter": 12,
-        "content": "<h1>Chapter 12: Primordial Dynamism: Emotion and Valence</h1><p>For <i>Enactivism</i>, <i>Emotion</i> is not an internal status but rather an outward movement. It is spawned in the dynamic interchanging between the body and the environment and the different ways of percieving valences, or values, that this body-environmrnt coupling provides. It is followed by an action that your entire body participates in, as limb and muscle movements, facial expressions, or even as invisible as change in your internal chemical systems.</p>"
+        "content": "<h1>Chapter 12: Primordial Dynamism: Emotion and Valence</h1><p>For <i>Enactivism</i>, emotion is not an internal status but rather an outward movement. It is spawned in the dynamic interchanging between the body and the environment and the different ways of percieving valences, or values, that this body-environmrnt coupling provides. It is followed by an action that your entire body participates in, as limb and muscle movements, facial expressions, or even as invisible as change in your internal chemical systems.</p>"
     },
     {
         "chapter": 13,
-        "content": "<h1>Chapter 13: Empathy and Enculturation</h1><p>This chapter introduces Empathy as based on <i>intersubjectivity</i>, the idea that our <i>self</i> is established in an interconnected network of selves that is filled with culture and built through history. Empathy is to involve your own body into an interactive system with another body, senseing what others sense and imagining living in others shoes.</p>"
+        "content": "<h1>Chapter 13: Empathy and Enculturation</h1><p>This chapter introduces empathy as based on <i>intersubjectivity</i>, the idea that our <i>self</i> is established in an interconnected network of selves that is filled with culture and built through history. Empathy is to involve your own body into an interactive system with another body, senseing what others sense and imagining living in others' shoes.</p>"
     }
 ]
