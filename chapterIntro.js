@@ -30,7 +30,7 @@ const chapterIntroData = [
     },
     {
         "chapter": 8,
-        "content": "<h1>Chapter 8: Life beyond The Gap</h1><p>Philosphers have long been trapped by the so called <i>Mind-Body Problem</i>: how can we explain the gap between them? How does the mind control the body, or how does the body control the mind? For Thompson, this is a non-problem. The relationship happens between different parts of the body, or between the physical and lived bodies."
+        "content": "<h1>Chapter 8: Life beyond The Gap</h1><p>Philosphers have long been trapped by the so called <i>Mind-Body Problem</i>: how can we explain the gap between them? How does the mind control the body, or how does the body talk to the mind? For Thompson, this is a non-problem. The relationship happens between different parts of the body, or between the physical and lived bodies."
     },
     {
         "chapter": 9,
